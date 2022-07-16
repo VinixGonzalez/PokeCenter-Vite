@@ -7,5 +7,5 @@ interface Props {
 }
 
 export const Layout: React.FC<Props> = ({ children }) => {
-  return <Container>{children}</Container>;
+  return <Container data-testid="layoutContainer">{children}</Container>;
 };
