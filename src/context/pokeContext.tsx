@@ -165,7 +165,7 @@ const pokeReducer = (
   return state;
 };
 
-const INITIAL_STATE: PokeStateType = {
+export const INITIAL_STATE: PokeStateType = {
   list: [],
   party: [],
 };
