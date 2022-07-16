@@ -39,6 +39,7 @@ export const PokeImg: React.FC<ImageProps> = ({
       width={96}
       height={96}
       loading="lazy"
+      data-testid="pokeImg"
     />
   );
 };

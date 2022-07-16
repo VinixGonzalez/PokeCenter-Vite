@@ -32,7 +32,7 @@ export const Box: React.FC = () => {
   }, [pokeState.list]);
 
   return (
-    <MainContainer>
+    <MainContainer data-testid="mainContainer">
       <BoxTitle>Box</BoxTitle>
       <BoxContainer>
         {pokeState.list?.map((poke) => (

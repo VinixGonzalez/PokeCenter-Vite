@@ -46,7 +46,7 @@ export const Party: React.FC = () => {
   }, [pokeState.party]);
 
   return (
-    <PartyContainer>
+    <PartyContainer data-testid="partyContainer">
       <PartyTitle>Party</PartyTitle>
 
       <PartyInfo>

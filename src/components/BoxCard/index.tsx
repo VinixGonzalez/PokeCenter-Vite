@@ -31,6 +31,7 @@ export const BoxCard: React.FunctionComponent<Props> = ({
 
   return (
     <Container
+      data-testid="boxCardContainer"
       selected={active}
       isEmpty={empty}
       onClick={handleSelectPoke}
