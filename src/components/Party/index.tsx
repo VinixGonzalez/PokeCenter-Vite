@@ -55,6 +55,7 @@ export const Party: React.FC = () => {
       <PartyList>
         {pokeState.party?.map((poke, index) => (
           <PartyBox
+            data-testid="partyBox"
             key={poke.pokeId}
             onClick={() => handleSelectFromParty(poke)}
           >
