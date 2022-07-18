@@ -23,6 +23,7 @@ export const BoxContainer = styled.ul`
 `;
 
 export const UpdateBox = styled.button`
+  font-family: "Poppins";
   border: none;
   background: #000;
   color: #fff;

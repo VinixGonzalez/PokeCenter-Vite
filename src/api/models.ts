@@ -1,4 +1,4 @@
-import { PokeStateType } from "../context/models";
+import { PokeStateType } from "context";
 
 type ResponseFormatted = {
   list: Array<Pokemon>;

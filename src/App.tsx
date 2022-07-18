@@ -1,13 +1,9 @@
 import { useContext, useEffect } from "react";
-import { SERVICE } from "./api/service";
-import { REPOSITORY } from "./api/repository";
-import { Box } from "./components/Box";
-import { Layout } from "./components/Layout";
-import { Party } from "./components/Party";
-import { PokeContextType } from "./context/models";
-import { PokeContext } from "./context/pokeContext";
-import { Content } from "./styles/GlobalStyles";
 import { toast } from "react-toastify";
+import { REPOSITORY, SERVICE } from "./api";
+import { Box, Layout, Party } from "./components";
+import { PokeContextType, PokeContext } from "./context";
+import { Content, Header, AppTitle } from "./styles/GlobalStyles";
 
 function App() {
   const { dispatch } = useContext<PokeContextType>(PokeContext);
@@ -27,7 +23,7 @@ function App() {
 
       if (hasError) {
         toast.error(errorMessage, {
-          position: toast.POSITION.TOP_CENTER,
+          position: toast.POSITION.TOP_RIGHT,
         });
 
         return;
@@ -42,9 +38,9 @@ function App() {
 
   return (
     <Layout>
-      <header>
-        <h1 style={{ textAlign: "center" }}>Pokecenter</h1>
-      </header>
+      <Header>
+        <AppTitle>PokéCenter</AppTitle>
+      </Header>
       <Content>
         <Party />
         <Box />

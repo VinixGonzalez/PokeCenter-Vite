@@ -1,6 +1,6 @@
 import axios from "axios";
-import { PokeStateType } from "../context/models";
-import { pickRandom } from "../utils";
+import { PokeStateType } from "context";
+import { pickRandom } from "utils";
 import {
   Pokemon,
   GetAllPokemonsResponse,

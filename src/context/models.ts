@@ -1,4 +1,4 @@
-import { Pokemon } from "../api/models";
+import { Pokemon } from "api";
 
 export interface ProviderProps {
   children: React.ReactNode;

@@ -4,7 +4,6 @@ export const PartyContainer = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 `;
 
 export const PartyTitle = styled.h2`
@@ -59,12 +58,17 @@ export const PokeInfo = styled.div`
 
 export const PokeName = styled.span`
   text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
 `;
 
 export const PartyInfo = styled.div`
   display: flex;
 `;
 
+export const PokeLvl = styled.span`
+  font-size: 0.9rem;
+`;
+
 export const PokeImg = styled.img``;
 export const ImgDefault = styled.img``;
-export const PokeLvl = styled.span``;
