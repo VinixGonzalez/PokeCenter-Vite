@@ -25,4 +25,4 @@ npm run test
 
 - Website: https://www.linkedin.com/in/vinicius-gonzalez-84b60a152/
 - Github: [@VinixGonzalez](https://github.com/VinixGonzalez)
-- LinkedIn: [@Vinicius Gonzalez](https://linkedin.com/in/Vinicius Gonzalez)
+- LinkedIn: [@Vinicius Gonzalez](https://www.linkedin.com/in/vinicius-gonzalez-84b60a152/)
