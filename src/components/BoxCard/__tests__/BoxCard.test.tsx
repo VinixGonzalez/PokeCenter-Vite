@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { BoxCard } from "..";
 import { Pokemon } from "../../../api";
-import { PokeContextMock } from "../../../mocks/ContextMock";
+import { PokeContextMock } from "../../../mocks/PokeContextMock";
 
 const pokeMock: Pokemon = {
   name: "test",
