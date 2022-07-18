@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   placeholderImg?: string;
   errorImg?: string;
 }
-export const PokeImg: React.FC<ImageProps> = ({
+export const PokeImg: React.FunctionComponent<ImageProps> = ({
   src,
   placeholderImg,
   errorImg,

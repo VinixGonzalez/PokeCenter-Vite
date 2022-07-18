@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { toast } from "react-toastify";
 import { SERVICE } from "../../api";
 import { PokeContextType, PokeContext } from "../../context";
@@ -6,7 +6,7 @@ import { BoxCard } from "../../components";
 
 import { BoxContainer, BoxTitle, MainContainer, UpdateBox } from "./styles";
 
-export const Box: React.FC = () => {
+export const Box: React.FunctionComponent = () => {
   const { pokeState, dispatch } = useContext(PokeContext) as PokeContextType;
 
   const handleUpdateBox = async () => {
