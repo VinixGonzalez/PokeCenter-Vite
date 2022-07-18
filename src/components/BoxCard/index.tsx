@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
-import { Pokemon } from "../../api/models";
-import { PokeBallSpin } from "../../assets";
-import { PokeContextType } from "../../context/models";
-import { PokeContext } from "../../context/pokeContext";
-
-import { capitalize } from "../../utils";
-import { PokeImg } from "../PokeImg";
+import { Pokemon } from "api";
+import { PokeBallSpin } from "assets";
+import { PokeContextType, PokeContext } from "context";
+import { capitalize } from "utils";
+import { PokeImg } from "components";
 
 import { Container } from "./styles";
 

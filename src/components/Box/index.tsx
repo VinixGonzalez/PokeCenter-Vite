@@ -1,9 +1,8 @@
 import React, { useContext, useMemo } from "react";
 import { toast } from "react-toastify";
-import { SERVICE } from "../../api/service";
-import { PokeContextType } from "../../context/models";
-import { PokeContext } from "../../context/pokeContext";
-import { BoxCard } from "../BoxCard";
+import { SERVICE } from "api";
+import { PokeContextType, PokeContext } from "context";
+import { BoxCard } from "components";
 
 import { BoxContainer, BoxTitle, MainContainer, UpdateBox } from "./styles";
 
@@ -15,14 +14,14 @@ export const Box: React.FC = () => {
 
     if (hasError) {
       toast.error(errorMessage, {
-        position: toast.POSITION.TOP_CENTER,
+        position: toast.POSITION.TOP_RIGHT,
       });
       return;
     }
 
     dispatch({ type: "SET_LIST", pokeList: list });
     toast.success("Box atualizado com sucesso!", {
-      position: toast.POSITION.TOP_CENTER,
+      position: toast.POSITION.TOP_RIGHT,
     });
   };
 

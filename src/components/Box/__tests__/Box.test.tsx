@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { Box } from "..";
 import { PokeContextMock } from "../../../mocks/ContextMock";
-import { PokeStateType } from "context/models";
+import { PokeStateType } from "context";
 
 const stateMock: PokeStateType = {
   list: [
@@ -155,16 +155,5 @@ describe("Box Component Tests", () => {
     );
     const boxCards = screen.getAllByTestId("boxCardContainer");
     expect(boxCards).toHaveLength(20);
-  });
-  test("Render Box Component With 20 BoxCards", () => {
-    render(
-      <PokeContextMock mockState={stateMock}>
-        <Box />
-      </PokeContextMock>
-    );
-    const boxCards = screen.getAllByTestId("boxCardContainer");
-    fireEvent.click(boxCards[1]);
-
-    screen.debug();
   });
 });

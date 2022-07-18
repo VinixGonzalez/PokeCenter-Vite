@@ -1,7 +1,6 @@
-import { PokeStateType } from "context/models";
 import React from "react";
 import { ReactNode } from "react";
-import { INITIAL_STATE, PokeContext } from "../context/pokeContext";
+import { INITIAL_STATE, PokeContext, PokeStateType } from "../context";
 
 interface PokeContextMockProps {
   children: ReactNode;

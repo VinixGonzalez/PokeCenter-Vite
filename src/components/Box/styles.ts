@@ -23,23 +23,26 @@ export const BoxContainer = styled.ul`
 `;
 
 export const UpdateBox = styled.button`
+  font-family: "Poppins";
   border: none;
-  background: #000;
-  color: #fff;
+  background: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.white};
   padding: 12px;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.5s ease;
+  box-shadow: 5px 5px 7px 3px
+    ${(props) => props.theme.colors.backgrounds.shadowBg};
 
   width: 50%;
 
   &:hover {
-    background: #40008090;
+    background: ${(props) => props.theme.colors.purpleHover};
   }
 
   &:disabled {
-    background: #40008090;
+    background: ${(props) => props.theme.colors.purpleHover};
     cursor: not-allowed;
   }
 `;
