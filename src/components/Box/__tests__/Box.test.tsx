@@ -2,7 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { Box } from "..";
 import { PokeContextMock } from "../../../mocks/ContextMock";
-import { PokeStateType } from "context";
+import { PokeStateType } from "../../../context";
 
 const stateMock: PokeStateType = {
   list: [

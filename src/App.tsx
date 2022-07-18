@@ -1,11 +1,11 @@
 import { useContext, useEffect } from "react";
 import { toast } from "react-toastify";
-import { REPOSITORY, SERVICE } from "api";
-import { Box, Layout, Party } from "components";
-import { PokeContextType, PokeContext } from "context";
+import { REPOSITORY, SERVICE } from "./api";
+import { Box, Layout, Party } from "./components";
+import { PokeContextType, PokeContext } from "./context";
 import { Content, Header, AppTitle } from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
-import { theme } from "styles/theme";
+import { theme } from "./styles/theme";
 
 function App() {
   const { dispatch } = useContext<PokeContextType>(PokeContext);
