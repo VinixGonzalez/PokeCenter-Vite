@@ -34,7 +34,7 @@ export const PokeImg: React.FC<ImageProps> = ({
   return (
     <img
       {...props}
-      alt={imgSrc}
+      alt="Pokémon Image"
       src={imgSrc}
       width={96}
       height={96}

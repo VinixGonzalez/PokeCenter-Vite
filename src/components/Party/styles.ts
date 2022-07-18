@@ -38,11 +38,13 @@ export const PartyBox = styled.li`
   justify-content: center;
   padding: 0 12px;
   cursor: pointer;
-  border: 1px solid #00c853;
+  border: 1px solid ${(props) => props.theme.colors.green};
   border-radius: 50px;
-  background: #fff;
-  -webkit-box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.33);
-  box-shadow: 5px 5px 7px 3px rgba(0, 0, 0, 0.33);
+  background: ${(props) => props.theme.colors.white};
+  -webkit-box-shadow: 5px 5px 7px 3px
+    ${(props) => props.theme.colors.backgrounds.shadowBg};
+  box-shadow: 5px 5px 7px 3px
+    ${(props) => props.theme.colors.backgrounds.shadowBg};
   transition: all 100ms ease-in;
 
   &:hover ${RemovePoke} {
