@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { BoxCard } from "..";
-import { Pokemon } from "api";
+import { Pokemon } from "../../../api";
 import { PokeContextMock } from "../../../mocks/ContextMock";
 
 const pokeMock: Pokemon = {
