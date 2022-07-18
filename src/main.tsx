@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import PokeContextProvider from "./context/pokeContext";
@@ -7,11 +7,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.Fragment>
+  <Fragment>
     <GlobalStyle />
     <ToastContainer />
     <PokeContextProvider>
       <App />
     </PokeContextProvider>
-  </React.Fragment>
+  </Fragment>
 );

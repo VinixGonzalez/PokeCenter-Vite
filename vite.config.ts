@@ -2,7 +2,9 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
-});
+export default defineConfig(({ mode }) => ({
+  plugins: mode === "development" ? [react(), tsconfigPaths()] : [],
+  esbuild: {
+    jsxInject: `import * as React from 'react'`,
+  },
+}));

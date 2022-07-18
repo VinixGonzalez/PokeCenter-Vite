@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo } from "react";
+import { useContext, useEffect, useMemo } from "react";
 
 import {
   PartyContainer,
@@ -16,7 +16,7 @@ import { PokeBallSpin } from "../../assets";
 import { PokeImg } from "../../components";
 import { PokeContext, PokeContextType } from "../../context";
 
-export const Party: React.FC = () => {
+export const Party: React.FunctionComponent = () => {
   const { pokeState, dispatch } = useContext(PokeContext) as PokeContextType;
 
   const handleSelectFromParty = (poke: Pokemon) => {
