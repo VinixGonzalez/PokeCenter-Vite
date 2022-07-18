@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Pokemon } from "../../api";
 import { PokeBallSpin } from "../../assets";
 import { PokeContextType, PokeContext } from "../../context";
