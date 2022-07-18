@@ -7,8 +7,8 @@ import {
   PokeStateType,
   ProviderProps,
 } from "./models";
-import { Pokemon, REPOSITORY } from "api";
-import { capitalize } from "utils";
+import { Pokemon, REPOSITORY } from "../api";
+import { capitalize } from "../utils";
 
 const pokeReducer = (
   state: PokeStateType,

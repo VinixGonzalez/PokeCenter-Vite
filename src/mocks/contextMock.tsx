@@ -1,5 +1,7 @@
 import React from "react";
 import { ReactNode } from "react";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../styles/theme";
 import { INITIAL_STATE, PokeContext, PokeStateType } from "../context";
 
 interface PokeContextMockProps {
@@ -13,7 +15,7 @@ const PokeContextMock = ({ children, mockState }: PokeContextMockProps) => {
     <PokeContext.Provider
       value={{ pokeState: mockState || INITIAL_STATE, dispatch }}
     >
-      {children}
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </PokeContext.Provider>
   );
 };
