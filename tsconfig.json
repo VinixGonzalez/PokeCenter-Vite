@@ -18,7 +18,10 @@
     "baseUrl": "./src",
     "paths": {
       "api/*": ["./src/api/*"],
-      "components/*": ["./src/components/*"]
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "context/*": ["./src/context/*"],
+      "utils/*": ["./src/context/*"]
     }
   },
   "include": ["src"],

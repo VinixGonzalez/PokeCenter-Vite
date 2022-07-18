@@ -2,8 +2,7 @@ import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import { BoxCard } from "..";
 import { Pokemon } from "api";
-
-import { PokeContextMock } from "../../../mocks/contextMock";
+import { PokeContextMock } from "../../../mocks/ContextMock";
 
 const pokeMock: Pokemon = {
   name: "test",
@@ -12,12 +11,14 @@ const pokeMock: Pokemon = {
   pokeLvl: 100,
 };
 
-test("Render BoxCard Component Properly", () => {
-  render(
-    <PokeContextMock>
-      <BoxCard active={false} empty={false} poke={pokeMock} />
-    </PokeContextMock>
-  );
-  const boxCardContainer = screen.getByTestId("boxCardContainer");
-  expect(boxCardContainer).toBeInTheDocument();
+describe("BoxCard Component Tests", () => {
+  test("Render BoxCard Component Properly", () => {
+    render(
+      <PokeContextMock>
+        <BoxCard active={false} empty={false} poke={pokeMock} />
+      </PokeContextMock>
+    );
+    const boxCardContainer = screen.getByTestId("boxCardContainer");
+    expect(boxCardContainer).toBeInTheDocument();
+  });
 });

@@ -1,8 +1,6 @@
 import axios from "axios";
-import { useContext } from "react";
-import { PokeStateType } from "../context/models";
-import { PokeContext } from "../context/pokeContext";
-import { pickRandom } from "../utils";
+import { PokeStateType } from "context";
+import { pickRandom } from "utils";
 import {
   Pokemon,
   GetAllPokemonsResponse,
@@ -16,6 +14,7 @@ const CONFIG = {
   POKE_IMG_BASE_URL:
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/",
   BOX_SIZE: 20,
+  INITIAL_POKE_LIMIT: 26,
   TOTAL_POKEMONS: 1154,
   MAX_POKE_LVL: 100,
 };
@@ -31,7 +30,7 @@ export const SERVICE: IPokeAPI = {
   async getAllPokemons(): Promise<ResponseFormatted> {
     try {
       const { data } = await _api.get<GetAllPokemonsResponse>(
-        "pokemon?limit=26"
+        `pokemon?limit=${CONFIG.INITIAL_POKE_LIMIT}`
       );
 
       const pokeList: Pokemon[] = data.results.map(({ name, url }) => {
@@ -71,7 +70,7 @@ export const SERVICE: IPokeAPI = {
           party: [],
           hasError: true,
           errorMessage:
-            "Erro inesperado ao tentar buscar a lista de Pokémons. Tente novament.",
+            "Erro inesperado ao tentar buscar a lista de Pokémons. Tente novamente.",
         };
       }
     }
@@ -80,16 +79,13 @@ export const SERVICE: IPokeAPI = {
     pokeState: PokeStateType
   ): Promise<UpdateBoxResponseFormatted> {
     try {
-      debugger;
       const { data } = await _api.get<GetAllPokemonsResponse>(
         `pokemon?limit=${CONFIG.TOTAL_POKEMONS}`
       );
 
       const random = data.results
         .filter((poke) => {
-          debugger;
           return !pokeState.party.find((pt) => {
-            debugger;
             return pt.name === poke.name;
           });
         })

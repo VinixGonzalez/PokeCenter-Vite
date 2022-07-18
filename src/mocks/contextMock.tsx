@@ -1,15 +1,18 @@
 import React from "react";
 import { ReactNode } from "react";
-import { INITIAL_STATE, PokeContext } from "../context/pokeContext";
+import { INITIAL_STATE, PokeContext, PokeStateType } from "../context";
 
 interface PokeContextMockProps {
   children: ReactNode;
+  mockState?: PokeStateType;
 }
-const PokeContextMock = ({ children }: PokeContextMockProps) => {
-  const dispatch = jest.fn();
+const dispatch = jest.fn();
 
+const PokeContextMock = ({ children, mockState }: PokeContextMockProps) => {
   return (
-    <PokeContext.Provider value={{ pokeState: INITIAL_STATE, dispatch }}>
+    <PokeContext.Provider
+      value={{ pokeState: mockState || INITIAL_STATE, dispatch }}
+    >
       {children}
     </PokeContext.Provider>
   );

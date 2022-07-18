@@ -1,4 +1,4 @@
-import { Pokemon } from "../api/models";
+import { Pokemon } from "../api";
 
 const capitalize = (word: string): string => {
   return `${word.charAt(0).toUpperCase()}${word.slice(1)}`;

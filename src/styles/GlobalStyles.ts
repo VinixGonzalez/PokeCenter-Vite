@@ -1,11 +1,4 @@
-import styled, {
-  createGlobalStyle,
-  css,
-  DefaultTheme,
-  FlattenInterpolation,
-  ThemedCssFunction,
-  ThemeProps,
-} from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -25,9 +18,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-      sans-serif;
-      background: linear-gradient(90deg, rgba(175,255,178,1) 0%, rgba(190,197,255,1) 100%);
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+    background: linear-gradient(90deg, rgba(175,255,178,1) 0%, rgba(190,197,255,1) 100%);
   }
 
   li {
@@ -46,6 +39,12 @@ export const Content = styled.div`
     flex-direction: column;
   }
 `;
+
+export const Header = styled.header`
+  text-align: center;
+`;
+
+export const AppTitle = styled.h1``;
 
 export const TooltipCSS = css`
   position: relative;

@@ -11,11 +11,10 @@ import {
   RemovePoke,
   PartyInfo,
 } from "./styles";
-import { Pokemon } from "../../api/models";
-import { PokeBallSpin } from "../../assets";
-import { PokeImg } from "../PokeImg";
-import { PokeContext } from "../../context/pokeContext";
-import { PokeContextType } from "../../context/models";
+import { Pokemon } from "api";
+import { PokeBallSpin } from "assets";
+import { PokeImg } from "components";
+import { PokeContext, PokeContextType } from "context";
 
 export const Party: React.FC = () => {
   const { pokeState, dispatch } = useContext(PokeContext) as PokeContextType;
@@ -55,6 +54,7 @@ export const Party: React.FC = () => {
       <PartyList>
         {pokeState.party?.map((poke, index) => (
           <PartyBox
+            data-testid="partyBox"
             key={poke.pokeId}
             onClick={() => handleSelectFromParty(poke)}
           >

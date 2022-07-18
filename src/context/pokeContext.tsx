@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import { Pokemon } from "../api/models";
+import { toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 import {
   PokeAction,
@@ -7,9 +7,8 @@ import {
   PokeStateType,
   ProviderProps,
 } from "./models";
-import { toast } from "react-toastify";
-import { capitalize } from "../utils";
-import { REPOSITORY } from "../api/repository";
+import { Pokemon, REPOSITORY } from "api";
+import { capitalize } from "utils";
 
 const pokeReducer = (
   state: PokeStateType,
@@ -65,7 +64,7 @@ const pokeReducer = (
         REPOSITORY.createParty(partyFiltered);
 
         toast.success(`${capitalize(poke.name)} libertado com sucesso!`, {
-          position: toast.POSITION.TOP_CENTER,
+          position: toast.POSITION.TOP_RIGHT,
         });
 
         return {
@@ -77,7 +76,7 @@ const pokeReducer = (
         console.log(error);
 
         toast.error(`Ocorreu um erro ao tentar libertar o Pokémon!`, {
-          position: toast.POSITION.TOP_CENTER,
+          position: toast.POSITION.TOP_RIGHT,
         });
 
         return {
@@ -119,7 +118,7 @@ const pokeReducer = (
               selectedFromList?.name as string
             )} adicionado com sucesso!`,
             {
-              position: toast.POSITION.TOP_CENTER,
+              position: toast.POSITION.TOP_RIGHT,
             }
           );
         } else {
@@ -130,7 +129,7 @@ const pokeReducer = (
               selectedFromList?.name as string
             )} com sucesso!`,
             {
-              position: toast.POSITION.TOP_CENTER,
+              position: toast.POSITION.TOP_RIGHT,
             }
           );
         }
@@ -149,7 +148,7 @@ const pokeReducer = (
         console.log(error);
 
         toast.error(`Ocorreu um erro ao tentar trocar os Pokémons!`, {
-          position: toast.POSITION.TOP_CENTER,
+          position: toast.POSITION.TOP_RIGHT,
         });
 
         return {
